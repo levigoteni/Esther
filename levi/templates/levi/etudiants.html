@@ -1,0 +1,270 @@
+{%load static %}
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://ecesig2.pythonanywhere.com/ -->
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta Tags -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Site keywords here">
+    <meta name="description" content="">
+    <meta name="copyright" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>ECES − CACSUP</title>
+    <!-- Favicon -->
+    
+    <link rel="icon" type="image/png" href="https://levigoteni.pythonanywhere.com/static/images/favicon.png">
+
+    <!-- Web Font -->
+    <link href="{% static 'levi/css/css' %}" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'levi/css/bootstrap.min.css' %}">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="{% static 'levi/css/font-awesome.min.css' %}">
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" href="{% static 'levi/css/niceselect.css' %}">
+    <!-- Fancy Box CSS -->
+    <link rel="stylesheet" href="{% static 'levi/css/jquery.fancybox.min.css' %}">
+    <!-- Fancy Box CSS -->
+    <link rel="stylesheet" href="{% static 'levi/css/cube-portfolio.min.css' %}">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="{% static 'levi/css/owl.carousel.min.css' %}">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="{% static 'levi/css/animate.min.css' %}">
+    <!-- Slick Nav CSS -->
+    <link rel="stylesheet" href="{% static 'levi/css/slicknav.min.css' %}">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="{% static 'levi/css/magnific-popup.css' %}">
+
+    <!-- Eduland Stylesheet -->
+    <link rel="stylesheet" href="{% static 'levi/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'levi/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'levi/css/responsive.css' %}">
+
+    <!-- Eduland Colors -->
+    <link rel="stylesheet" href="{% static 'levi/css/color1.css' %}">
+
+</head>
+
+<body>
+
+	<!-- Header -->
+		<header class="header">
+			<!-- Header Inner -->
+			<div class="header-inner overlay">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-12">
+							<!-- Logo -->
+							<div class="logo">
+								<a href="/"><img src="{% static 'levi/css/eces_logo.png' %}" alt="#" width="100"></a>
+							</div>
+							<!--/ End Logo -->
+							<div class="mobile-menu"><div class="slicknav_menu"><a href="#" aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed"><span class="slicknav_menutxt"></span><span class="slicknav_icon slicknav_no-text"><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span><span class="slicknav_icon-bar"></span></span></a><ul role="menu" aria-hidden="true" style="display: none;" class="slicknav_nav slicknav_hidden">
+											<li class="active"><a tabindex="-1" role="menuitem" href="https://levigoteni.pythonanywhere.com/"><i class="fa fa-home"></i>Accueil</a></li>
+											<li><a tabindex="-1" role="menuitem" href="https://levigoteni.pythonanywhere.com/list_etudiant/"><i class="fa fa-clone"></i>Etudiants</a></li>
+											
+										</ul></div></div>
+						</div>
+						<div class="col-lg-9 col-md-9 col-12">
+							<div class="menu-bar">
+								<nav class="navbar navbar-default">
+									<div class="navbar-collapse">
+										<!-- Main Menu -->
+										<ul id="nav" class="nav menu navbar-nav">
+											<li class="active"><a href="https://levigoteni.pythonanywhere.com/"><i class="fa fa-home"></i>Accueil</a></li>
+											<li><a href="https://levigoteni.pythonanywhere.com/list_etudiant/"><i class="fa fa-clone"></i>Etudiants</a></li>
+											
+										</ul>
+										<!-- End Main Menu -->
+									</div> 
+								</nav>
+								<!-- Search Area -->
+									
+								<!-- End Search Area-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/ End Header Inner -->
+		</header>
+		<!--/ End Header -->
+		
+		<!-- Slider Area -->
+		
+		<!-- Breadcrumb -->
+		<div class="breadcrumbs overlay">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-12">
+						<h2>{{etudiant.nom}} {{etudiant.prenom}}</h2>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!--/ End Breadcrumb -->
+						<!-- Courses -->
+		<section class="courses archive section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Course -->
+						<div class="single-course">
+							<!-- Course Head -->
+							<div class="course-head overlay">
+                                <img src="{{ etudiant.photo.url }}" alt="#">
+								
+							</div>
+							<!-- Course Body -->
+							<div class="course-body">
+								<div class="name-price">
+									<div class="teacher-info">
+										<img src="{{ etudiant.photo.url }}" alt="#">
+										<h4 class="title">{{etudiant.nom}} {{etudiant.prenom}}</h4>
+									</div>
+									<span class="price">{{etudiant.matricule}}</span>
+								</div>
+								<h5>Âge: {{etudiant.age}}</h5>
+								<h5>Filière: {{etudiant.filiere}}</h5>
+								<h5>Niveau: {{etudiant.niveau}}</h5>
+								<h5>Année Académique: {{etudiant.AnneeA}}</h5>
+							</div>
+							<!-- Course Meta -->
+							<div class="course-meta">
+								<!-- Rattings -->
+								<ul class="rattings">
+									
+								</ul>
+								<!-- Course Info -->
+								<div class="course-info">
+									
+								</div>
+							</div>
+							<!--/ End Course Meta -->
+						</div>
+						<!--/ End Single Course -->
+					</div>
+					
+					
+
+							<!--/ End Course Meta -->
+						</div>
+						<!--/ End Single Course -->
+					</div>
+				
+			
+		</section>   
+    <!--/ End Slider Area -->
+
+
+    <!--/ End Clients CSS -->
+
+    <!-- Footer -->
+    <footer class="footer section">
+        <!-- Footer Top -->
+        <div class="footer-top overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <!-- About -->
+                        <div class="single-widget about">
+                            <h2>ECES</h2>
+                            <ul class="list">
+                                <li><i class="fa fa-phone"></i>Phone: +242068676562 </li>
+                                <li><i class="fa fa-envelope"></i>Email: <a
+                                        href="mailto:levigoteni@gmail.com">levigoteni@gmail.com</a></li>
+                                <li><i class="fa fa-map-o"></i>Address: 95, rue Mbomo, Brazzaville</li>
+                            </ul>
+                            <!-- Social -->
+
+                            <!-- End Social -->
+                        </div>
+                        <!--/ End About -->
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <!-- Useful Links -->
+ 
+                        <!--/ End Useful Links -->
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <!-- Useful Links -->
+
+                        <!--/ End Useful Links -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Footer Top -->
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Copyright -->
+                        <div class="copyright">
+                            <p>© Copyright ECES 2019. Développé en Django par <a
+                                    href="https://levigotenipythonanywhere.com/">LEVI GOTENI</a> .</p>
+                        </div>
+                        <!--/ End Copyright -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Footer Bottom -->
+    </footer>
+    <!--/ End Footer -->
+
+    <!-- Jquery JS-->
+    <script src="{% static 'levi/css/jquery.min.js.téléchargement' %}"></script>
+    <script src="{% static 'levi/css/jquery-migrate.min.js.téléchargement' %}"></script>
+    <!-- Colors JS-->
+    <script src="{% static 'levi/css/colors.js.téléchargement%' %}"></script>
+    <!-- Popper JS-->
+    <script src="{% static 'levi/css/popper.min.js.téléchargement' %}"></script>
+    <!-- Bootstrap JS-->
+    <script src="{% static 'levi/css/bootstrap.min.js.téléchargement' %}"></script>
+    <!-- Owl Carousel JS-->
+    <script src="{% static 'levi/css/owl.carousel.min.js.téléchargement' %}"></script>
+    <!-- Jquery Steller JS -->
+    <script src="{% static 'levi/css/jquery.stellar.min.js.téléchargement' %}"></script>
+    <!-- Final Countdown JS -->
+    <script src="{% static 'levi/css/finalcountdown.min.js.téléchargement' %}"></script>
+    <!-- Fancy Box JS-->
+    <script src="{% static 'levi/css/facnybox.min.js.téléchargement' %}"></script>
+    <!-- Magnific Popup JS-->
+    <script src="{% static 'levi/css/jquery.magnific-popup.min.js.téléchargement' %}"></script>
+    <!-- Circle Progress JS -->
+    <script src="{% static 'levi/css/circle-progress.min.js.téléchargement' %}"></script>
+    <!-- Nice Select JS -->
+    <script src="{% static 'levi/css/niceselect.js.téléchargement' %}"></script>
+    <!-- Jquery Steller JS-->
+    <script src="{% static 'levi/css/jquery.stellar.min.js.téléchargement' %}"></script>
+    <!-- Jquery Steller JS-->
+    <script src="{% static 'levi/css/cube-portfolio.min.js.téléchargement' %}"></script>
+    <!-- Slick Nav JS-->
+    <script src="{% static 'levi/css/slicknav.min.js.téléchargement' %}"></script>
+    <!-- Easing JS-->
+    <script src="{% static 'levi/css/easing.min.js.téléchargement' %}"></script>
+    <!-- Waypoints JS-->
+    <script src="{% static 'levi/css/waypoints.min.js.téléchargement' %}"></script>
+    <!-- Counter Up JS -->
+    <script src="{% static 'levi/css/jquery.counterup.min.js.téléchargement' %}"></script>
+    <!-- Scroll Up JS-->
+    <script src="{% static 'levi/css/jquery.scrollUp.min.js.téléchargement' %}"></script>
+    <!-- Gmaps JS-->
+
+    <!-- Main JS-->
+    <script src="{% static 'levi/css/main.js.téléchargement' %}"></script>
+
+    <a id="scrollUp" href="https://levigoteni.pythonanywhere.com/#top"
+        style="display: none; position: fixed; z-index: 2147483647;"><i class="fa fa-home"></i></a>
+</body>
+
+</html>
